@@ -21,6 +21,7 @@ function Pokelist(props) {
         axios.get(BASE_URL + "?limit=20").then((response) => {
             setPokemonList(response.data.results);
         });
+        console.log(pokemonList)
     }, []);
 
     return (

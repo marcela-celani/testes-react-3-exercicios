@@ -48,8 +48,11 @@ function Pokecard(props) {
     useEffect(() => {
         axios.get(url).then((response) => {
             setPokemonDetails(response.data)
+
         });
     }, [url]);
+
+    console.log(pokemonDetails)
 
     if (!pokemonDetails) {
         return <p>Loading...</p>
